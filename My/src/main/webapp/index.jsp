@@ -67,7 +67,7 @@ ckground-color: rgba(var(--bs-success-rgb), var(--bs-bg-opacity));
 </div>
 
 <div class="container bg-danger" id="dec">
-   <form action="Decompress" metho="post">
+   <form action="dec" method="post">
    <div class="w-100 mx-0">
                         <h1>Decompress File</h1>
                         <h2 class="text-left">Use this online file compressor to reduce the file size of your file documents. Make file smaller to send them via e-mail or upload them to the internet.</h2>

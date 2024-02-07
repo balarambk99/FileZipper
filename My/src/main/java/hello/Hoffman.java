@@ -43,7 +43,7 @@ public class Hoffman  extends HttpServlet {
 				
 		int a=0;
 		String aString=request.getParameter("name");
-	
+	  
 			ServletContext context=getServletContext(); 
                      String mt=null;
 		 response.setContentType("application/octet-stream");
@@ -58,16 +58,20 @@ public class Hoffman  extends HttpServlet {
 		 
 	  	OutputStream o=response.getOutputStream();
 	  	File kFile=compressFile(p);
-		FileInputStream v=new NewFile("C:\\Program Files\\Apache Software Foundation\\Tomcat 10.1\\work\\balaram.jar");
+		FileInputStream v=new FileInputStream("C:\\Program Files\\Apache Software Foundation\\Tomcat 10.1\\work\\balaram.jar");
 		 response.setHeader(hkString, g);
 		response.setContentLength(v.available());
+		byte aa[]=v.readAllBytes();
 	  	ObjectOutputStream objectOutputStream=new ObjectOutputStream(o);
-	  	objectOutputStream.writeObject(v);
+	  	objectOutputStream.writeObject(aa);
 	  objectOutputStream.writeObject(code);
-	
-	  	//System.out.print(code);
-	  	int c=0;
-	  	StringBuffer buffer=new StringBuffer();
+	   for(int i=0;i<aa.length;i++)
+		   System.out.println(aa[i]);
+	  System.out.print(code);
+	System.out.print("hello scuceefully file object ");
+	  	
+	  	//int c=0;
+	  //	StringBuffer buffer=new StringBuffer();
 //	  	while((c=v.read())!=-1)
 //	  			{o.write(c);
 //	  			  String aa=Integer.toBinaryString(c);
@@ -80,16 +84,16 @@ public class Hoffman  extends HttpServlet {
 //	  			  }
 //	  			  buffer.append(a);
 //	  			}
-	  	String l="";
-	  			for(int i=0;i<buffer.length();i++)
-	  			{
-	  				l+=buffer.charAt(i);
-	  				if(code.get(l)!=null)
-	  				{
-	  					System.out.print(code.get(l));
-	  					l="";
-	  				}
-	  			}
+//	  	String l="";
+//	  			for(int i=0;i<buffer.length();i++)
+//	  			{
+//	  				l+=buffer.charAt(i);
+//	  				if(code.get(l)!=null)
+//	  				{
+//	  					System.out.print(code.get(l));
+//	  					l="";
+//	  				}
+//	  			}
 	  				
 
 		 }catch (Exception e) 
@@ -230,6 +234,7 @@ public class Hoffman  extends HttpServlet {
             int k=Math.min(i+8,str.length());
            String su=str.substring(i, k);
           int y=Integer.parseInt(su,2);
+          System.out.println("oh:"+y+" "+(char)y);
           fi.write((char)y);
           fB.append(su);
            }
