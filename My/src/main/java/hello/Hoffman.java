@@ -51,7 +51,7 @@ public class Hoffman  extends HttpServlet {
 		  System.out.print("hello ");
 		 
 			
-		//byte aa[]=v.readAllBytes();
+		
 		 String hkString="Context-Disposition";
 		 String g=String.format("attachement;filname=\"%s\"", aString);
 		  context.setAttribute("my","hello");	
@@ -70,30 +70,7 @@ public class Hoffman  extends HttpServlet {
 	  System.out.print(code);
 	System.out.print("hello scuceefully file object ");
 	  	
-	  	//int c=0;
-	  //	StringBuffer buffer=new StringBuffer();
-//	  	while((c=v.read())!=-1)
-//	  			{o.write(c);
-//	  			  String aa=Integer.toBinaryString(c);
-//	  			  if(aa.length()!=8)
-//	  			  {
-//	  				  for(int i=0;i<=8;i++)
-//	  				  {
-//	  					  aa="0"+aa;
-//	  				  }
-//	  			  }
-//	  			  buffer.append(a);
-//	  			}
-//	  	String l="";
-//	  			for(int i=0;i<buffer.length();i++)
-//	  			{
-//	  				l+=buffer.charAt(i);
-//	  				if(code.get(l)!=null)
-//	  				{
-//	  					System.out.print(code.get(l));
-//	  					l="";
-//	  				}
-//	  			}
+	  
 	  				
 
 		 }catch (Exception e) 

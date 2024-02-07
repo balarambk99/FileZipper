@@ -50,8 +50,6 @@ public class Compress extends HttpServlet {
     	  InputStream pInputStream=part.getInputStream();
     	  System.out.print("Decompress");
  	  ObjectInputStream objectInputStream=new ObjectInputStream(pInputStream);
-//    	  FileInputStream fp=(FileInputStream)objectInputStream.readObject();
-//    	  HashMap<String, Character> hashMap=(HashMap<String, Character>)objectInputStream.readObject();
     	  OutputStream pOutputStream=response.getOutputStream();
     	  int a=0;
     	  response.setContentType("application/octet-stream");
@@ -67,22 +65,7 @@ public class Compress extends HttpServlet {
     		  pOutputStream.write((char)x[i]);
     		  
     	  }
-			/*
-			 * while((a=fp.read())!=-1) { String aString=Integer.toBinaryString(a);
-			 * if(aString.length()!=8) { for(int i=aString.length();i<=8;i++)
-			 * aString="0"+aString; } bf.append(aString);
-			 * 
-			 * }
-			 */
-//    	  String p="";
-//    	  for(int i=0;i<bf.length();i++)
-//    	  {
-//    		  p+=bf.charAt(i);
-//    		  if(hashMap.get(p)!=null)
-//    		  {
-//    			  pOutputStream.write(hashMap.get(p));
-//    		  }
-//    	  }
+			
     	  pOutputStream.close();
     	  
       }catch(Exception e)
