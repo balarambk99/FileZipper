@@ -54,7 +54,7 @@ public class Compress extends HttpServlet {
     	  int a=0;
     	  response.setContentType("application/octet-stream");
     	  String hkString="Context-Disposition";
- 		 String g=String.format("attachement;filname=\"%s\"", "hall");
+ 		 String g=String.format("attachement;filname=\"%s\"", "MyFile");
  		response.setHeader(hkString, g);
  		response.setContentLength(pInputStream.available());
     	  StringBuffer bf=new StringBuffer();
